@@ -102,30 +102,22 @@ add_action('wp_enqueue_scripts', 'enqueue_jquery');
 
 /* remove plugin script/css */
 function my_deregister_plugs() {
-    $handles = array('wp-paginate', 'fdfootnote_script', 'jetpack-widgets');
+    $handles = array('wp-paginate', 'fdfootnote_script', 'jetpack-widgets', 'grunion.css');
     foreach($handles as $handle){
-        wp_deregister_style( $handle);
+        wp_deregister_style( $handle );
+        wp_dequeue_style( $handle );
         wp_deregister_script( $handle);
     }
 }
 add_action( 'wp_print_styles', 'my_deregister_plugs', 100 );
 
-
-
-/**** Remove css for wp-paginate ****/
 /*
-function my_deregister_styles(){wp_deregister_style('wp-paginate');}
-add_action('wp_print_styles','my_deregister_styles',100);
-*/
-
-/**** Remove js for wp-footnote ****/
-/*
-function my_deregister_footnotes() {
-	wp_deregister_script( 'fd_footnotes' );
+function remove_grunion_style() {
+wp_dequeue_style('grunion.css');
+wp_deregister_style('grunion.css');
 }
-add_action( 'wp_print_scripts', 'my_deregister_footnotes', 100 );
+add_action('wp_print_styles', 'remove_grunion_style');
 */
-/* rc='http://gransbrytning.se/wp-content/plugins/fd-footnotes/fdfootnotes.js?ver=1.3'></script> */
 
 
 /**** Remove rel="cat" since it's not valid html5 ****/

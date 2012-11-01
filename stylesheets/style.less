@@ -1,7 +1,7 @@
 /*
 Theme Name:         Gränsbrytning
 Description:        Theme built with http://scalecss.com
-Version:            20121029
+Version:            20121101
 Author:             Johan Edlund
 Author URI:         http://edlunddesign.com
 */
@@ -1178,7 +1178,7 @@ h2 a.nummer:before {content:'';}
 
 /* `Buttons
 ---------------------------------------------------------------*/
-.button, .button-primary {
+.button, .button-primary, .pushbutton-wide {
   -moz-box-shadow:inset 0 1px 0 0 #ffffff;
   -webkit-box-shadow:inset 0 1px 0 0 #ffffff;
   box-shadow:inset 0px 1px 0px 0 #ffffff,
@@ -1199,11 +1199,11 @@ h2 a.nummer:before {content:'';}
 
 }
 
-.button:hover, .button-primary:hover {
+.button:hover, .button-primary:hover, .pushbutton-wide:hover {
   .gradient(#dfdfdf, #dfdfdf, #ededed);
 }
 
-.button:active, button-primary:active {
+.button:active, button-primary:active, .pushbutton-wide:active {
 /*
   position:relative;
   top:1px;
@@ -1303,26 +1303,6 @@ div.sharedaddy div.sd-block {
     width: 100% !important;
 }
 
-/*
-<link rel='stylesheet' id='sharedaddy-css'  href='http://gransbrytning.se/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css?ver=0.3.1' type='text/css' media='all' />
-
-<div class="sharedaddy sd-sharing-enabled">
-<div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
-<h3 class="sd-title">Dela denna sida:</h3>
-<div class="sd-content">
-<ul>
-<li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://gransbrytning.se.preview.citynetwork.se/forsvaret-pa-civila-vagar/?share=facebook&amp;nb=1" title="Dela på Facebook" id="sharing-facebook-1435"><span>Facebook</span></a></li>
-<li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://gransbrytning.se.preview.citynetwork.se/forsvaret-pa-civila-vagar/?share=twitter&amp;nb=1" title="Klicka för att dela på Twitter" id="sharing-twitter-1435"><span>Twitter</span></a></li>
-<li class="share-email share-service-visible"><a rel="nofollow" class="share-email sd-button share-icon" href="http://gransbrytning.se.preview.citynetwork.se/forsvaret-pa-civila-vagar/?share=email&amp;nb=1" title="Klicka för att maila detta till en vän"><span>E-post</span></a></li>
-<li class="share-end"></li>
-</ul>
-<div class="sharing-clear"></div>
-</div>
-</div>
-</div>
-*/
-
-
 /* `Respond form
 ---------------------------------------------------------------*/
 /* hand cursor on clickable input elements */
@@ -1354,10 +1334,22 @@ input[type=checkbox] {
 .form-logged-in {}
 .form-left {}
 
+.contact-form label span {margin-left: .2em; color: lighten(@grey, 10%);}
+.contact-form label.checkbox {width:100%; display: inherit;padding-top: 1em;}
+.contact-form label.checkbox br, .contact-form .contact-submit br {display: none;}
+.contact-form .contact-submit { padding-bottom: 1em; }
+
+
+.contact-form .clear-form {margin: 0;padding: 0;}
+small {font-size: .875em; color:#666; }
+
+p.contact-submit {margin: 0;}
+
 #respond p {}
 #respond fieldset {padding:1em 0;}
 #respond legend {font-size: 1.2em;padding-top: 1.5em;line-height: .3em;}
-#respond label {font-size:.8125em;font-family:.sans;padding:0;margin:0;color:#777;}
+#respond label, .contact-form label {font-size:.8125em;font-family:.sans;padding:0;margin:0;color:#777;}
+
 #respond .accesskey {text-decoration: underline;margin:0;padding:0;}
 
 #respond .logged-in-as {
@@ -1370,7 +1362,7 @@ input[type=checkbox] {
   font-size:.8125em;
 }
 
-#respond input, #respond textarea, .input,  /* wp-class loginform */ {
+#respond input, #respond textarea, .input, .contact-form input[type='text'], .contact-form input[type='email']  /* wp-class loginform */ {
   width:auto;
   font-size:1em;
   font-family:sans-serif;
@@ -1381,8 +1373,9 @@ input[type=checkbox] {
   border: 1px solid lighten(@logogrey, 24%);
 }
 
-#respond input, .input {
+#respond input, .input, .contact-form input[type='text'], .contact-form input[type='email']{
   width:47%;
+  margin: 0;
 }
 #respond textarea {
   height:10em;
@@ -1399,6 +1392,7 @@ input[type=checkbox] {
   font-size:.8125em;
   padding-top: 0;
 }
+
 
 
 /*
