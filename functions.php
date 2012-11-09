@@ -102,7 +102,7 @@ add_action('wp_enqueue_scripts', 'enqueue_jquery');
 
 /* remove plugin script/css */
 function my_deregister_plugs() {
-    $handles = array('wp-paginate', 'fdfootnote_script', 'jetpack-widgets', 'grunion.css');
+    $handles = array('wp-paginate', 'fdfootnote_script', 'jetpack-widgets', 'grunion.css', 'sharedaddy');
     foreach($handles as $handle){
         wp_deregister_style( $handle );
         wp_dequeue_style( $handle );

@@ -83,28 +83,25 @@ $(document).ready(function() {
   
   //remove titles from images
   $('img[title]').each(function() { $(this).removeAttr('title'); });
+  
+  var activeOpacity   = 0.4,
+      inactiveOpacity = 1,
+      fadeTime = 350,
+      images = ".lightbox img";
+  
+  $(images).fadeTo(1, inactiveOpacity);
+  
+  $(images).hover(
+      function(){
+          $(this).fadeTo(fadeTime, activeOpacity);
+      }, function(){
+          $(this).fadeTo(fadeTime, inactiveOpacity);
+      }, function(){
+          $(this).fadeTo(fadeTime, 0.1);
+      });
+      
+   $(images).click(function() {
+      $(this).fadeTo(fadeTime, inactiveOpacity);
+   });
 
-});
-
-
-$(window).bind("load", function() {
-    var activeOpacity   = 0.4,
-        inactiveOpacity = 1,
-        fadeTime = 350,
-        images = ".lightbox img";
-
-    $(images).fadeTo(1, inactiveOpacity);
-
-    $(images).hover(
-        function(){
-            $(this).fadeTo(fadeTime, activeOpacity);
-        }, function(){
-            $(this).fadeTo(fadeTime, inactiveOpacity);
-        }, function(){
-            $(this).fadeTo(fadeTime, 0.1);
-        });
-        
-     $(images).click(function() {
-        $(this).fadeTo(fadeTime, inactiveOpacity);
-     });
 });

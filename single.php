@@ -94,6 +94,10 @@ else { ?>
   <div class="hr"></div><hr />
   <p>Logga in för att läsa hela artikeln.</p>
   <?php wp_login_form();
+    $my_id = 8699;
+    $post_123 = get_post($my_id); 
+    $body = $post_123->post_content;
+    echo($body);
 } ?>
 
 </section><!-- end post_content section -->
