@@ -19,7 +19,7 @@ elseif (is_tag())  {
   echo 'Arkiv för etiketten <span>&ldquo;' . single_tag_title('', false ) . '&rdquo;</span>';
 } 
 elseif (is_archive()){ 
-  echo 'Arkiv för <span>&ldquo;'; echo theme_get_archive_date(); echo '&rdquo;</span>';
+  echo 'Arkiv för <span>' . theme_get_archive_date() . '</span>';
 }
 else {
   echo $issueTitle;
