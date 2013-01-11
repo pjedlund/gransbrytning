@@ -11,15 +11,11 @@
 <title><?php wp_title('&laquo;', true, 'right'); ?><?php bloginfo('name'); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--[if (lt IE 9) & (!IEMobile)]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/libs/selectivizr-min.js"></script>
-<![endif]-->
-
 <script src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr-2.5.3.min.js"></script>
 
 <?php wp_head(); ?>
 
-<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' );$m = wp_get_theme(); echo "?" . $m->Version; ?>" />
+<link id="base-css" rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' );$m = wp_get_theme(); echo "?" . $m->Version; ?>" />
 
 </head>
 
@@ -47,6 +43,7 @@ if (is_user_logged_in()) { ?>
 <li class="om"><a class="ss-binoculars" href="<?php echo $baseurl; ?>/om/">Om</a></li>
 <li class="kontakt"><a class="ss-touchtonephone" href="<?php echo $baseurl; ?>/kontakt/">Kontakt</a></li>
 </ul>
+<div></div>
 <?php } else { ?>
 <ul class="clearfix">
 <li class="hem"><a class="ss-home" href="<?php echo $baseurl; ?>">Hem</a></li>
@@ -54,11 +51,15 @@ if (is_user_logged_in()) { ?>
 <li class="om"><a class="ss-binoculars" href="<?php echo $baseurl; ?>/om/">Om</a></li>
 <li class="prenumerera"><a class="ss-user" href="<?php echo $baseurl; ?>/prenumerera/">Prenumerera</a></li>
 </ul>
+<div></div>
 <?php } ?>
 </nav>
 <div id="leftSnurf"></div><div id="rightSnurf"></div>
 <?php getBadge(); ?>
-
 </div><!-- end navcontainer -->
 
+<!-- oh, IE, you fool.. http://www.sitepoint.com/fix-disappearing-absolute-position-element-ie/ -->
+<div></div>
+
 </header>
+
