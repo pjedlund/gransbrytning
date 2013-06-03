@@ -16,6 +16,7 @@
 <?php wp_head(); ?>
 
 <link id="base-css" rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' );$m = wp_get_theme(); echo "?" . $m->Version; ?>" />
+<link href='http://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,300' rel='stylesheet' />
 
 </head>
 
