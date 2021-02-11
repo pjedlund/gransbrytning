@@ -1,4 +1,4 @@
-# WordPress tema för gransbrytning.se test for Git
+# WordPress tema för gransbrytning.se test for Git2
 
 Utvecklat av [Johan Edlund](http://edlunddesign.com/) / [@pjedlund](http://twitter.com/pjedlund/).
 
@@ -20,9 +20,9 @@ http://gransbrytning.se/humans.txt
   Standards: HTML5, CSS3
   Components: WordPress, Modernizr, jQuery, LESS
   Software: Coda, Pixelmator, Illustrator, GitHub, CodeKit, Gradient
-  
 
-                                    
+
+
                                -o/-                       
                                +oo//-                     
                               :ooo+//:                    
