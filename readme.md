@@ -1,4 +1,4 @@
-# WordPress tema för gransbrytning.se
+# WordPress tema för gransbrytning.se test for Git
 
 Utvecklat av [Johan Edlund](http://edlunddesign.com/) / [@pjedlund](http://twitter.com/pjedlund/).
 
