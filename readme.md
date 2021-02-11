@@ -1,4 +1,4 @@
-# WordPress tema för gransbrytning.se test for Git2223222
+# WordPress tema för gransbrytning.se test for GitSista
 
 Utvecklat av [Johan Edlund](http://edlunddesign.com/) / [@pjedlund](http://twitter.com/pjedlund/).
 
